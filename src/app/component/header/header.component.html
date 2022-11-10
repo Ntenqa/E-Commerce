@@ -1,0 +1,27 @@
+
+    <header class="bg-warning shadow-sm">
+        <div class="main-content container">
+            <div class="navbar  ">
+            
+                <div class="navbar-brand align-item-center d-flex"></div>
+                <a routerLink="/home"><i style="font: size 40px;" class="fas fa-lightbulb"></i></a>
+                <strong style="font-size:30px">Solar panels and chargers</strong>
+                <div class="form">
+                    <input type="text"class="form" [(ngModel)]="searchTerm" (keyup)="search($event)" placeholder="search">
+                </div>
+                <span  class="fas fa-search search-icon"></span>
+                <button routerLink="/cart" class="btn btn-warning">
+                    <i style="font-size:30px" class="fas fa-cart-plus cart"></i>
+                    <div style="font-size:10px;" class="badge bg-danger">{{totalItem}}</div>
+                </button>
+            
+            </div>
+            
+           
+        </div>
+        
+
+    </header>
+    
+    
+

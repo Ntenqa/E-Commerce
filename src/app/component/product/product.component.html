@@ -1,0 +1,44 @@
+<div class="card-top container-fluid">
+    <div class="container d-flex">
+        <div class="item">
+            
+            <a (click)="getProducts()">
+                <img style="width: 57px;height:52px;margin-top: 30px;" src="https://i.postimg.cc/QCFg2w1V/all-products.jpg"class="image" alt="All Products">
+                <h5>All products</h5>
+            </a>
+            
+
+        </div>
+        <div class="item">
+            <a (click)="getCharger()">
+                <img style="width: 57px;height:52px;margin-top: 30px;" src="https://i.postimg.cc/WpFwMM5c/chargers.jpg" class="image" alt="">
+                <h5>Chargers</h5>
+            </a>
+            
+
+        </div>
+        <div class="item">
+            <a (click)="getSolar()">
+                <img style="width: 57px;height:52px;margin-top: 30px;"src="https://i.postimg.cc/Hkq47dR2/solar.jpg" class="image" alt="">
+                <h5>Solar panels</h5>
+            </a>
+               
+
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <ng-container *ngFor="let item of productList | filter:searchKey:'title' " >
+            <div class="card col-md-3">
+                <img  src="{{item.image}}" alt="{{item.title}}">
+                <h6 style="overflow:hidden;text-overflow:ellipsis">{{item.title}}</h6>
+                <p>{{item.name}}</p>
+                <p><strong>Price:</strong>R{{item.price}}</p>
+                <button class="btn btn-primary"(click)="addtocart(item)">Add to cart</button>
+            </div>
+
+        </ng-container>
+        
+    </div>
+</div>

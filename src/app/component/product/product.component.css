@@ -1,0 +1,36 @@
+.card-top{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: white;
+    background-clip:border-box;
+    border:1px solid yellow;
+    border-radius: 0.20rem;
+}
+
+.item img{
+    width: 64px;
+}
+.item{
+    margin: 0px 16px;
+    align-items: center;
+   
+}
+.item a{
+    color: black;
+    
+}
+.item a:hover{
+    color: rgb(241, 241, 51);
+}
+.card{
+    height:350px;
+    margin: 15px;
+}
+img{
+    height: 189px;
+    padding: 10px;
+}
+
